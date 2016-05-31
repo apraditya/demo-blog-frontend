@@ -25,7 +25,9 @@
 
 					<ul class="dropdown-menu">
 						{{#each sections as |section|}}
-							<li><a href="#">{{ section.name }}</a></li>
+              {{#link-to 'sections.section' section.slug tagName="li"}}
+                <a href="">{{section.name}}</a>
+              {{/link-to}}
 						{{/each}}
 					</ul>
 				</li>
