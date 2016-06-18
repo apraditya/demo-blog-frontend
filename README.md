@@ -1,7 +1,8 @@
 # Demo-blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is Adinda's EmberJS playground. Place where I learn & do cool stuff in Ember.
+The backend code for this is available [here](https://github.com/apraditya/demo-blog-backend)
+and it's deployed on [Heroku](https://demo-blog-backend-production.herokuapp.com).
 
 ## Prerequisites
 
@@ -22,7 +23,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
+* `ember s --proxy https://demo-blog-backend-production.herokuapp.com`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
