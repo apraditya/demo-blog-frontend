@@ -60,7 +60,7 @@
 
   },
 
-  "app/styles/*.css": {
+  "app/styles/*.scss": {
     "command": "style",
     "template": [
       "/* {}.css */",

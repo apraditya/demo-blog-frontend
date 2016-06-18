@@ -1,37 +1,24 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#main-navbar">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+		{{#link-to "index" class="logo"}}
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo Image">
+		{{/link-to}}
 
-      {{#link-to 'index' class='navbar-brand'}}My Site{{/link-to}}
-    </div>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
 
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav">
-        {{#link-to 'articles' tagName="li"}}<a href="">Articles</a>{{/link-to}}
-				<li class="dropdown">
-					<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						Sections
-						<span class="caret"></span>
-					</a>
-
-					<ul class="dropdown-menu">
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link">{{#link-to "articles"}}Artikel{{/link-to}}</li>
+        <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)">Kategori</a>
+          <ul class="submenu">
 						{{#each sections as |section|}}
               {{#link-to 'sections.section' section.slug tagName="li"}}
                 <a href="">{{section.name}}</a>
               {{/link-to}}
-						{{/each}}
-					</ul>
-				</li>
+            {{/each}}
+          </ul>
+        </li>
       </ul>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
